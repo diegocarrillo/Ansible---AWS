@@ -1,4 +1,4 @@
---- #Gather Facts EC2 frin my remote instances dssdsds
+--- #Gather Facts EC2 frin my remote instances adding a modification right here 
 - hosts: aws
   remote_user: ec3-user
   become: yes
