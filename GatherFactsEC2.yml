@@ -1,14 +1,14 @@
---- #Gather Facts EC2 frin my remote instances
-- hosts: aws
-  remote_user: ec2-user
-  become: yes
-  connection: ssh
-  gather_facts: yes
-  tasks:
+--- #Gather Facts EC2 from remote instances
+- hosts: aws #Group Name on ansible/hosts
+  remote_user: ec2-user #Default EC2 user to loggin via ssh
+  become: yes #become root
+  connection: ssh #connection Type
+  gather_facts: yes # Get all the facts from Instance
+  tasks: #Task too perform
   - name: Gather the EC2 Facts about running instance(s)
-    action: ec2_facts
+    action: ec2_facts #Gather facts action
   - name: Display the instance Type
-    debug: msg='{{ ansible_ec2_instance_type }}'
+    debug: msg='{{ ansible_ec2_instance_type }}' #Show only the instance type from gather_facts
 # In order to get a message only if we got the specified instance type
 # - name: Conditional Display of Instance Type
 #   debug: msg="This Instance is of type t2.micro"
