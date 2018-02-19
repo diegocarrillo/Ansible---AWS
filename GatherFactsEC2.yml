@@ -9,3 +9,7 @@
     action: ec2_facts
   - name: Display the instance Type
     debug: msg='{{ ansible_ec2_instance_type }}'
+# In order to get a message only if we got the specified instance type
+# - name: Conditional Display of Instance Type
+#   debug: msg="This Instance is of type t2.micro"
+#   when: ansible_ec2_instance_type == 't2.micro'
