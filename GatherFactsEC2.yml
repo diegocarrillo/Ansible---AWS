@@ -1,4 +1,4 @@
---- #Gather Facts EC2 frin my remote instances adding a modification right here 
+--- #Gather Facts EC2 frin my remote instances adding a modification right here, last comment from atom
 - hosts: aws
   remote_user: ec3-user
   become: yes
