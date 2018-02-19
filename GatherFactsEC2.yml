@@ -1,0 +1,11 @@
+--- #Gather Facts EC2 frin my remote instances
+- hosts: aws
+  remote_user: ec3-user
+  become: yes
+  connection: ssh
+  gather_facts: yes
+  task:
+  - name: Gatjer the EC2 Facts about running instance(s)
+  action: ec2_facts
+  - name: Display the instance Type
+  debug: msg='{{ ansible_ec2_instance_type }}'
