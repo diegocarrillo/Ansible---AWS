@@ -1,6 +1,6 @@
 --- #Gather Facts EC2 frin my remote instances
 - hosts: aws
-  remote_user: ec3-user
+  remote_user: ec2-user
   become: yes
   connection: ssh
   gather_facts: yes
