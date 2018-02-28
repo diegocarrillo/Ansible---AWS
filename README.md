@@ -1,2 +1,2 @@
-# Ansible---AWS, update
+# Ansible-AWS
 Ansible Playbooks for AWS - CloudFormation Stacks
